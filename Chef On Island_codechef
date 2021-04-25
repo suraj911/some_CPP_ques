@@ -1,0 +1,30 @@
+***
+https://www.codechef.com/START3C/problems/CCISLAND
+***
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;cin>>t;
+    double a,b,a1,b1,d,he_can_live;
+    while(t--){
+        cin>>a>>b>>a1>>b1>>d;
+        a = a/a1;
+        b = b/b1;
+        if(a<b){
+            he_can_live = a;
+        }
+        else{
+            he_can_live = b;
+        }
+        if(he_can_live>=d){
+            cout<<"YES"<<"\n";
+        }
+        else{
+            cout<<"NO"<<"\n";
+        }
+    }
+	return 0;
+}
