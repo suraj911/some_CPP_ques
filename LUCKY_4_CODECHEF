@@ -1,0 +1,22 @@
+#include<iostream>
+#include<climits>
+using namespace std;
+
+int fun(int a){
+    int t,c=0;
+    while(a>0){
+        t = a%10;
+        if(t==4) {c++;}
+        a = a/10;
+    }
+    return c;
+}
+
+int main(){
+    int t;cin>>t;
+    int a;
+    while(t--){
+        cin>>a;
+        cout<<fun(a)<<endl;
+    }
+}
