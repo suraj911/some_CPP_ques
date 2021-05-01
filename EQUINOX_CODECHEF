@@ -1,0 +1,61 @@
+******
+Sarthak and Anuradha are very good friends and are eager to participate in an event called Equinox. 
+It is a game of words. In this game, N strings S1,…,SN are given. For each string Si, 
+if it starts with one of the letters of the word “EQUINOX”, Sarthak gets A points and if not, Anuradha gets B points. 
+The one who has more points at the end of the game wins. If they both the same number of points, the game is a draw..
+Print the winner of the game, if any, otherwise print “DRAW”.
+******
+
+
+
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+
+        HashSet<Character> equinox = new HashSet<>();
+        equinox.add('E');
+        equinox.add('Q');
+        equinox.add('U');
+        equinox.add('I');
+        equinox.add('N');
+        equinox.add('O');
+        equinox.add('X');
+
+        while (t > 0) {
+            --t;
+            int n = scanner.nextInt();
+            int a = scanner.nextInt();
+            int b = scanner.nextInt();
+            scanner.nextLine();
+
+            long scoreA=0, scoreB=0;
+
+            for (int i = 0; i < n; i++) {
+                if(equinox.contains(scanner.nextLine().charAt(0))){
+                    scoreA+=a;
+                }else{
+                    scoreB+=b;
+                }
+            }
+
+            if(scoreA==scoreB){
+                System.out.println("DRAW");
+            }else if (scoreA>scoreB){
+                System.out.println("SARTHAK");
+            }else{
+                System.out.println("ANURADHA");
+            }
+        }
+	}
+}
