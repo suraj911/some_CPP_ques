@@ -1,0 +1,31 @@
+*****
+It’s 10:30 pm and Khushi is trying to make a to-do list for the next day. 
+There are N tasks where each task requires H hours to complete. Considering she takes X hours in completing her mundane tasks, 
+determines whether she will be able to finish all the tasks the other day.
+*****
+****
+i/p:
+  5 8
+  3 2 3 3 1
+****
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n,x;cin>>n>>x;
+	x = 24-x;
+	int a[n];
+	int s=0;
+	for(int i=0;i<n;i++){
+	    cin>>a[i];
+	    s = s+a[i];
+	}
+	if(s<=x){
+	    cout<<"YES"<<"\n";
+	}
+	else{
+	    cout<<"NO"<<"\n";
+	}
+	return 0;
+}
