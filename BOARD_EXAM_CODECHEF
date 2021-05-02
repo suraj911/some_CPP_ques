@@ -1,0 +1,33 @@
+*****
+Sneha is giving her board exam in Science. And her question paper has Part A and Part B, each containing N questions. 
+If she has to choose X questions from part A and Y questions from part B. Help Sneha to find out how many ways can she choose the question.
+*****
+*****
+I/P:
+  1
+  10 8 5
+*****
+
+#include <iostream>
+using namespace std;
+#define ll long long
+ll fact(ll n)
+{
+    ll res = 1, i;
+    for (i = 2; i <= n; i++)
+        res *= i;
+    return res;
+}
+
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+	ll t,n,x,y;
+	cin>>t;
+	while(t--){
+	    cin>>n>>x>>y;
+	    ll  w1 = (fact(n)/(fact(x)*fact(n-x)))*((fact(n)/(fact(y)*fact(n-y))));
+	    cout<<w1<<"\n";
+	}
+	return 0;
+}
