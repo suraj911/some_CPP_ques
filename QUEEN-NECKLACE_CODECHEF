@@ -1,0 +1,41 @@
+****
+The King of Wales was very busy because of some work and he could not give much time to his Queen, because of which she is very angry. 
+To make her happy the king decided to make a necklace of pearls for her. The king buys an array A of n pearls where the i-th element represents the type of pearl. 
+Since he loves her alot , he knows that she will like the Necklace only if each type of pearl is present in the Necklace in a unique quantity.
+Can you tell if the queen will like the Necklace.
+****
+
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+ios::sync_with_stdio(NULL);
+cin.tie(NULL);
+cout.tie(NULL)
+int t, n;
+cin >> t;
+while (t–)
+{
+cin >> n;
+int a[n];
+map<int, int> mp;
+set < int> s;
+for(int i=0; i<n; i++)
+{
+cin >> a[i];
+mp[a[i]]++;
+}
+for (auto i : mp)
+{
+s.insert(i.second);
+}
+if (s.size() == m.size())
+cout<<“Yes”;
+else
+cout<<“No”;
+cout<<endl;
+}
+return 0;
+}
