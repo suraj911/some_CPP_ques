@@ -1,0 +1,28 @@
+****
+Alice and Bob went to the metrology station on school tour. Due to the lockdown the station was closed so,
+they decided to play some games. During that Alice pressed a button and left it unknowingly. 
+After the opening of the station the employee of noticed that there is some inaccuracies. 
+The chairman of the station define inaccuracy as the absolute difference between the actual reading and forecasted reading.
+As a employee you have to calculate the inaccuracy across the week.
+a denotes actual reading and f denotes forecasted reading.
+****
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int a[7],b[7];
+    for(int i=0;i<7;i++){
+        cin>>a[i];
+    }
+    for(int i=0;i<7;i++){
+        cin>>b[i];
+    }
+    int c=0;
+    for(int i=0;i<7;i++){
+        c = c+ abs(a[i]-b[i]);
+    }
+    cout<<c<<"\n";
+    return 0;
+}
