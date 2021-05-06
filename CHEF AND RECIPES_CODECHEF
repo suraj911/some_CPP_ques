@@ -1,0 +1,26 @@
+****
+Chef was given a task where he has a sequence of N recipes.
+Each recipe has a goodness score which is given by 4i+1 (0≤i<N). Chef will like this sequence of recipes if all of them have the same goodness score. 
+Chef is allowed to do below operation any number of times to make goodness of all recipes equal .
+In one operation, Chef can select any two recipes X and Y and then subtract 1 from Recipe X and add 1 to Recipe Y. 
+He has to make the goodness score of all the recipes equal using some operations. 
+Since the Chef is busy in preparing food, help him find the minimum numbers of operations needed to make the goodness of all recipes equal.
+****
+
+#include <iostream>
+using namespace std;
+#define ll long long int
+int main(){
+    ios_base::sync_with_stdio(false);cin.tie(0);
+    int t;cin>>t;
+    while(t--){
+        ll n;cin>>n;
+        if(n%2==0){
+            cout << n*(n/2) << endl;
+        }
+        else{
+            cout<<(n-1)*((n+1)/2) << endl;
+        }
+    }
+    return 0;
+}
