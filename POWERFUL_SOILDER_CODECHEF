@@ -1,0 +1,32 @@
+****
+There is a number assigned to every soldier in the war. 
+You are given a list soldier of size n in which soldier[i] is the soldier’s number which fought in the war at time i.
+You have to return the powerful soldier’s number.
+The powerful soldier is the soldier who appears more than n/2 times in the war.
+You may assume that powerful soldier always exist.
+****
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int n;cin>>n;
+	map<int ,int> m;
+	int a[n];
+	for(int i=0;i<n;i++){
+	    cin>>a[i];
+	}
+	for(int i=0;i<n;i++){
+	    m[a[i]]++;
+	}
+	int l=0,ans=0;
+	for(auto k: m){
+	    if(k.second>l){
+	        l=k.second;
+	        ans=k.first;
+	    }
+	}
+	cout<<ans<<"\n";
+	return 0;
+}
