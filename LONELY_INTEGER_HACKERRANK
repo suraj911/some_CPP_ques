@@ -1,0 +1,25 @@
+****
+Given an array of integers, where all elements but one occur twice, find the unique element.
+****
+
+//////////////////////////////////////WITHOUT BIT MANIPULATION//////////////////////
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,a;cin>>n;
+    map<int,int> m;
+    for(int i=0;i<n;i++){
+        cin>>a;
+        m[a]++;
+    }
+    int y;
+    for(auto i:m){
+        if(i.second!=2){
+          y=i.first;  
+        }
+    }
+    cout<<y<<"\n";
+    return 0;
+}
