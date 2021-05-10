@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main(int argc, char const *argv[])
+{
+	int n;cin>>n;
+	int ans=0;
+	int no;
+	while(n--){
+		cin>>no;
+		ans = ans^no;
+	}
+	cout<<ans<<"\n";
+	return 0;
+}
