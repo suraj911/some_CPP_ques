@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+
+void Notoperator(int n){
+	cout<<~n<<"\n";
+}
+
+void And(int n1,int n2,int n3){
+	cout<<(n1&n2)<<" :is n1 & n2 "<<"\n";
+	cout<<(n2&n3)<<" :is n2 & n3 "<<"\n";
+	cout<<(n3&n1)<<" :is n3 & n1 "<<"\n";
+}
+
+void XOR(int n1,int n2,int n3){
+	cout<<(n1^n2)<<" :is n1 ^ n2 "<<"\n";
+	cout<<(n2^n3)<<" :is n2 ^ n3 "<<"\n";
+	cout<<(n3^n1)<<" :is n3 ^ n1 "<<"\n";
+}
+
+
+void Rightshiftby1op(int n){
+	cout<<(n>>1)<<" :is RIGHT SHIFT OF"<<n<<" BY 1. "<<"\n";
+}
+
+void leftshiftby1op(int n){
+	cout<<(n<<1)<<" :is LEFT SHIFT OF"<<n<<" BY 1. "<<"\n";
+}
+
+int main(int argc, char const *argv[])
+{
+	int n1,n2,n3;
+	
+	cin>>n1>>n2>>n3;
+	
+	Notoperator(n1);
+	Notoperator(n2);
+	Notoperator(n3);
+	
+	cout<<"--------------------------"<<"\n";
+	
+	And(n1,n2,n3);
+	
+	cout<<"--------------------------"<<"\n";
+	
+	XOR(n1,n2,n3);
+	
+	cout<<"--------------------------"<<"\n";
+	
+	cout<<"         SHIFT OPERATOR(<< AND >>)         "<<"\n";
+	
+	cout<<endl<<"LEFT SHIFT BY 1 MEANS NUMBER*2 OR (A << B) = A * 2 POWER B"<<"\n";
+	
+	leftshiftby1op(n1);
+	leftshiftby1op(n2);
+	leftshiftby1op(n3);
+	
+	cout<<"--------------------------"<<"\n";
+	
+	cout<<endl<<"RIGHT SHIFT BY 1 MEANS NUMBER/2 OR (A >> B) = A / 2 POWER B"<<"\n";
+
+	Rightshiftby1op(n1);
+	Rightshiftby1op(n2);
+	Rightshiftby1op(n3);
+
+	return 0;
+}
