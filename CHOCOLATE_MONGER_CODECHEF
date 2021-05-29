@@ -1,0 +1,26 @@
+****
+There are n chocolates, and you are given an array of n numbers where the i-th number Ai is the flavour type of the i-th chocolate. 
+Sebrina wants to eat as many different types of chocolates as possible, but she also has to save at least x number of chocolates for her little brother.
+Find the maximum possible number of distinct flavour types Sebrina can have.
+****
+
+#include <bits/stdc++.h>
+#define ll long long int 
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false);cin.tie(0);
+	ll t;cin>>t;
+	while(t--){
+	    ll n,x;cin>>n>>x;
+	    set<ll> m;
+	    for(ll i=0;i<n;i++){
+	         ll a;cin>>a;
+	        m.insert(a);
+	    }
+	    ll s = m.size();
+	    //n-=x;
+	    cout<<(min(n-x,s))<<"\n";
+	}
+	return 0;
+}
