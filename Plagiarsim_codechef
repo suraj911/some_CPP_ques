@@ -1,0 +1,42 @@
+***
+You are an administrator of a popular quiz website.
+Every day, you hold a quiz on the website.
+There are N users (numbered 1 through N) and M admins (numbered N+1 through N+M). For each quiz, each user is allowed to attempt it at most once. 
+Sometimes, admins attempt the quizzes for testing purposes too; an admin may attempt a quiz any number of times.
+On a certain day, the quiz was attempted K times. For each i (1≤i≤K), the i-th of these attempts was made by the person with number Li. 
+Find all the users who attempted the quiz more than once, in order to disqualify them.
+***
+
+#include <bits/stdc++.h>
+#include<map>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    map<int,int> p;
+	    int n,m,k;
+	    vector<int> v;
+	    cin>>n>>m>>k;
+	    int a;
+	    for(int i=0;i<k;i++){
+	        cin>>a;
+	       p[a]++;
+	    }
+	    int c=0;
+	    for(auto i:p){
+	        if(i.first <= n and i.second >1){
+	            v.push_back(i.first);
+	            c++;
+	        }
+	    }
+	    cout<<c<<" ";
+	    for(int i=0;i<c;i++){
+	        cout<<v[i]<<" ";
+	    }
+	    cout<<"\n";
+	}
+	return 0;
+}
+
