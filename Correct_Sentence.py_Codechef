@@ -1,0 +1,45 @@
+****
+Chef knows about two languages spoken in Chefland, but he is not proficient in any of them. 
+The first language contains lowercase English letters between 'a' and 'm' inclusive and the second 
+language contains only uppercase English letters between 'N' and 'Z' inclusive.
+
+Due to Chef's limited vocabulary, he sometimes mixes the languages when forming a sentence — each word of Chef's sentence
+contains only characters from one of the languages, but different words may come from different languages.
+
+You are given a sentence as a sequence of K words S1,S2,…,SK. Determine whether it could be a sentence formed by Chef,
+i.e. if it contains only the characters from the two given languages and each word contains only characters from a single language.
+****
+
+
+
+# cook your dish here
+t=int(input())
+l='abcdefghijklm'
+u='NOPQRSTUVWXYZ'
+for _ in range(t):
+    temp=input().split()
+    k=temp[0]
+    ar=temp[1:]
+    sentence=True    
+    for i in ar:
+        word=True
+        for j in range(len(i)):
+            if i[j] not in l:
+                word=False
+                break
+                
+        if word==True:
+            continue
+        word=True
+        for j in range(len(i)):
+            if i[j] not in u:
+                word=False
+                break
+                
+        if word==False:
+            sentence=False
+            break
+    if sentence==True:
+        print("YES")
+    else:
+        print("NO")
