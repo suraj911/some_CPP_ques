@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;cin>>t;
+	for(int i=0;i<t;i++){
+	    int w,x,y,z;
+	    cin>>w>>x>>y>>z;
+	    cout<<((y/w) + (z/x))<<"\n";
+	}
+	return 0;
+}
